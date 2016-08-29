@@ -1,0 +1,16 @@
+{
+  "platform": "windows64",
+  "jdk": "openjdk-1.7.0-u80-unofficial-windows-amd64-image.zip",
+  "executable": "chariot",
+  "classpath": [
+    "desktop/build/libs/desktop-1.0.jar"
+  ],
+  "mainclass": "org.dw.ld36.desktop.DesktopLauncher",
+  "vmargs": [
+    "Xmx1G"
+  ],
+  "resources": [
+  ],
+  "minimizejre": "soft",
+  "output": "out-win"
+}

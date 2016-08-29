@@ -409,7 +409,8 @@ public class Main extends ApplicationAdapter {
                 }
                 if (Math.abs(enemy.position - player.position) < 500) {
                     if (player.hitTimer <= 0) {
-                        hit.play();
+                        long play = hit.play();
+                        hit.setVolume(play, 0.2f);
                         player.hitTimer = 40 / player.getAttackPower();
                         enemy.health -= 1;
                         if (enemy.health < 0) {
@@ -418,7 +419,8 @@ public class Main extends ApplicationAdapter {
                         }
                     }
                     if (enemy.hitTimer <= 0) {
-                        hit.play();
+                        long play = hit.play();
+                        hit.setVolume(play, 0.2f);
                         enemy.hitTimer = 40 / enemy.getAttackPower();
                         player.health -= 1;
                         if (player.health < 0) {
